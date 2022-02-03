@@ -1,6 +1,26 @@
 @use './mixins' as *;
 
 .container {
+  @include flex(flex-start);
+  @include size(100vh);
+  padding-block: 2rem;
+  overflow-x: hidden;
+}
+
+.content {
   @include flex;
-  @include size(100vh, 100vw);
+  @include size(50rem, 90vw);
+  background: #efefef;
+  flex-flow: row wrap;
+
+  header {
+    @include flex;
+    @include size(10%);
+  }
+
+  section {
+    @include flex;
+    @include size(90%);
+  }
+
 }
