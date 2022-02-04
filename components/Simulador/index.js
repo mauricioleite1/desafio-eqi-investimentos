@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ButtonsContainer from './ButtonsContainer';
 import styles from '../../styles/Simulador.module.scss';
 
 const Simulador = () => {
+  const [indicador, setIndicador] = useState({ ipca: '', cdi: '' });
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get('http://localhost:3000/indicadores');
+
+      const ipca = data.find(({ nome }) => nome === 'ipca').valor;
+      const cdi = data.find(({ nome }) => nome === 'cdi').valor;
+  
+      setIndicador({ ipca, cdi });
+    }
+    getData();
+  }, []);
+
   return (
     <div className={styles.container}>
       <h2>Simulador</h2>
@@ -37,14 +52,14 @@ const Simulador = () => {
             <label htmlFor='ipca'>
               <h4>IPCA (ao ano)</h4>
             </label>
-            <input type='text' id='ipca' />
+            <input type='text' id='ipca' value={ `${indicador.ipca}%` } />
           </div>
         </form>
 
         <form>
           <div className={styles.choice}>
             <div>
-              <h4>TIpos de indexação</h4>
+              <h4>Tipos de indexação</h4>
               <span>
                 <h4>i</h4>
               </span>
@@ -71,7 +86,7 @@ const Simulador = () => {
             <label htmlFor='cdi'>
               <h4>CDI (ao ano)</h4>
             </label>
-            <input type='text' id='cdi' />
+            <input type='text' id='cdi' value={ `${indicador.cdi}%` } />
           </div>
         </form>
       </div>
