@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from '../styles/Simulador.module.scss';
+import ButtonsContainer from './ButtonsContainer';
+import styles from '../../styles/Simulador.module.scss';
 
-const Simulacao = () => {
+const Simulador = () => {
   return (
     <div className={styles.container}>
       <h2>Simulador</h2>
@@ -75,12 +76,9 @@ const Simulacao = () => {
         </form>
       </div>
 
-      <div className={styles.buttonsContainer}>
-        <button className="btn btn-form">Limpar campos</button>
-        <button className="btn btn-form" disabled>Simular</button>
-      </div>
+      <ButtonsContainer />
     </div>
   );
 };
 
-export default Simulacao;
+export default Simulador;

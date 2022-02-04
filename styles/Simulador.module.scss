@@ -70,16 +70,3 @@
     outline: none;
   }
 }
-
-.buttonsContainer {
-  @include flex;
-  @include size(3.5rem);
-  gap: 1rem;
-
-  button {
-    font: {
-      size: 1rem;
-      weight: bold;
-    }
-  }
-}
