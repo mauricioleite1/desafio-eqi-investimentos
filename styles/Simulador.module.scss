@@ -5,3 +5,7 @@
   @include size(100%);
   flex: 1;
 }
+
+.choiceButtons {
+  @include flex;
+}

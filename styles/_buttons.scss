@@ -1,0 +1,26 @@
+.btn {
+  @include flex;
+  @include size(auto, _);
+  @include transition(0.1s);
+  background: none;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    background: #cbcbcb4a;
+  }
+}
+
+.btn-choice {
+  padding: 1.1rem 2rem;
+
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

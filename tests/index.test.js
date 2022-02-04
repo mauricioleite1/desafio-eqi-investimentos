@@ -11,11 +11,4 @@ describe('Página Inicial', () => {
 
     expect(heading).toBeInTheDocument()
   })
-
-  it('2 . Renderiza dois botões da seção Rendimento', () => {
-    render(<Home />)
-
-    const buttons = screen.getAllByRole('button');
-    expect(buttons.length).toBe(2);
-  });
 })
