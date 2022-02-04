@@ -10,13 +10,32 @@ const Simulacao = () => {
         <div className={styles.choice}>
           <div>
             <h4>Rendimento</h4>
-            <h4>i</h4>
+            <span>
+              <h4>i</h4>
+            </span>
           </div>
 
-          <div className={styles.choiceButtons}>
+          <div>
             <button className='btn btn-choice'>Bruto</button>
             <button className='btn btn-choice'>Líquido</button>
           </div>
+        </div>
+
+        <div className={styles.inputsContainer}>
+          <label htmlFor='aporte-inicial'>
+            <h4>Aporte Inicial</h4>
+          </label>
+          <input type='text' id='aporte-inicial' />
+
+          <label htmlFor='prazo'>
+            <h4>Prazo (em meses)</h4>
+          </label>
+          <input type='text' id='prazo' />
+
+          <label htmlFor='ipca'>
+            <h4>IPCA (ao ano)</h4>
+          </label>
+          <input type='text' id='ipca' />
         </div>
       </form>
     </div>

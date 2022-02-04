@@ -40,5 +40,14 @@ describe('Componente Simulador', () => {
     });
   });
 
+  describe('Seção de Inputs', () => {
+    it('d . Renderiza três 3 inputs dentro do form', () => {
+      render(<Simulador />)
+  
+      const inputs = screen.getAllByRole('textbox');
+      expect(inputs.length).toBe(3);
+    });
+  });
+
 
 })

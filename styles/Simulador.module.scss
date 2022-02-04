@@ -15,18 +15,50 @@
   }
 }
 
-.title {
-  @include flexspaced;
-  @include size;
-}
-
 .choice {
   @include flex;
+  @include size(10rem);
   flex-direction: column;
   gap: 10px;
 
   div {
     @include flexspaced;
     @include size(auto, 100%);
+
+    span {
+      @include flex;
+      @include size(1rem, 1rem);
+      border: 1px solid #000;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.8em;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.inputsContainer {
+  @include flex;
+  @include size;
+  flex-direction: column;
+  // background: blue;
+  gap: 2rem;
+
+  label {
+    width: 100%;
+  }
+
+
+  input {
+    @include size(2rem);
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    margin-top: -5px;
+    outline: none;
   }
 }
