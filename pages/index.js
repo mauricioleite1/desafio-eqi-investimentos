@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import Simulacao from '../components/Simulador';
+import ResultadoDaSimulacao from '../components/ResultadoDaSimulacao';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -15,7 +17,8 @@ export default function Home() {
           <h1>Simulador de Investimentos</h1>
         </header>
         <section>
-          
+          <Simulacao />
+          <ResultadoDaSimulacao />
         </section>
       </main>
     </div>
