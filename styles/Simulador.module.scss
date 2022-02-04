@@ -35,7 +35,7 @@
 }
 
 
-.formsContainer {
+.wrapper {
   @include flex;
   @include size;
   gap: 7rem;
@@ -46,27 +46,5 @@
     flex: 1;
     flex-direction: column;
     gap: 4rem;
-  }
-}
-
-.inputsContainer {
-  @include flex;
-  @include size;
-  flex-direction: column;
-  gap: 2.8rem;
-
-  label {
-    width: 100%;
-  }
-
-
-  input {
-    @include size(2.4rem);
-    background: none;
-    border: none;
-    border-bottom: 1px solid black;
-    padding-left: 5px;
-    margin-top: -2.4rem;
-    outline: none;
   }
 }

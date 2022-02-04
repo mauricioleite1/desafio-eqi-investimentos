@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../styles/Simulador/ButtonsContainer.module.scss';
 
-const ButtonsContainer = () => {
+const FormButtons = () => {
   return (
     <div className={styles.container}>
       <button className='btn btn-form'>
@@ -15,4 +15,4 @@ const ButtonsContainer = () => {
   );
 };
 
-export default ButtonsContainer;
+export default FormButtons;

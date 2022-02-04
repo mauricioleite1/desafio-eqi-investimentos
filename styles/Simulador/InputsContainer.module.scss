@@ -1,0 +1,23 @@
+@use '../mixins' as *;
+
+.container {
+  @include flex;
+  @include size;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  label {
+    width: 100%;
+  }
+
+
+  input {
+    @include size(2.4rem);
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    margin-top: -2.4rem;
+    outline: none;
+  }
+}
