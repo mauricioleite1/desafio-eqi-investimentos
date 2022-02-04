@@ -26,7 +26,7 @@ describe('Componente Simulador', () => {
       expect(buttons.length).toBe(2);
     });
 
-    it('Os botões de escolha entre os tipos devem ser clicáveis e ter apenas as classes específicas', () => {
+    it('c. Os botões de escolha entre os tipos devem ser clicáveis e ter apenas as classes específicas', () => {
       render(<Simulador />)
   
       const buttons = screen.getAllByRole('button');
