@@ -32,7 +32,7 @@ export const opcoesIndexacao = [
 export const inputsRendimento = [
   {
     id: 1,
-    codigo: 'aporte-inicial',
+    codigo: 'aporteinicial',
     titulo: 'Aporte Inicial',
   },
   {
@@ -50,7 +50,7 @@ export const inputsRendimento = [
 export const inputsIndexacao = [
   {
     id: 1,
-    codigo: 'aporte-mensal',
+    codigo: 'aportemensal',
     titulo: 'Aporte Mensal',
   },
   {

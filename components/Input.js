@@ -1,25 +1,19 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { getData } from '../context/helpers';
 
 const Input = ({ type = 'text', id, codigo }) => {
   const [content, setContent] = useState('');
   const [indicador, setIndicador] = useState('');
   
-  useEffect(() => {    
-    const getData = async () => {
-      const { data } = await axios.get('http://localhost:3000/indicadores');
-      const { valor } = data.find((indicador) => indicador.nome === codigo);
-  
-      setIndicador(`${valor}%`);
-    };
-
+  useEffect(() => {
     if (codigo === 'cdi' || codigo === 'ipca') {
-      getData();
+      getData(setIndicador, codigo);
     }
   }, [codigo]);
 
-  const handleChange = ({ target }) => {
-    setContent(target.value);
+  const handleChange = ({ target: { value } }) => {
+    if (indicador) setIndicador(value)
+    setContent(value);
   };
 
   return (

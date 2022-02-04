@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import Head from 'next/head'
 import Simulador from '../components/Simulador';
 import ResultadoDaSimulacao from '../components/ResultadoDaSimulacao';
+import { Info } from '../context/info';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
+  const context = useContext(Info);
+
   return (
     <div className={styles.container}>
       <Head>
