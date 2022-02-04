@@ -12,14 +12,15 @@
   @include size(50rem);
   background: #efefef;
   flex-flow: row wrap;
+  padding-bottom: 20px;
 
   header {
     @include flex;
-    @include size(14%);
+    @include size(10%);
   }
 
   section {
     @include flex;
-    @include size(86%);
+    @include size(90%);
   }
 }
