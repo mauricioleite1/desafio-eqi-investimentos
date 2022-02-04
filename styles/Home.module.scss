@@ -2,8 +2,8 @@
 
 .container {
   @include flex(flex-start);
-  @include size(100vh);
-  padding: 2rem;
+  @include size;
+  padding: 2rem 2rem;
   overflow-x: hidden;
 }
 

@@ -19,35 +19,40 @@ describe('Componente Simulador', () => {
       expect(text).toBeInTheDocument()
     });
   
-    it('b . Renderiza dois botões de escolhe entre os tipos', () => {
+    it('b . Renderiza todos os botões do form', () => {
       render(<Simulador />)
   
       const buttons = screen.getAllByRole('button');
-      expect(buttons.length).toBe(2);
+      expect(buttons.length).toBe(7);
     });
-
-    it('c. Os botões de escolha entre os tipos devem ser clicáveis e ter apenas as classes específicas', () => {
-      render(<Simulador />)
-  
-      const buttons = screen.getAllByRole('button');
-      buttons.forEach(button => {
-        expect(button).toBeInTheDocument();
-        expect(button).toBeEnabled();
-
-        expect(button).toHaveClass('btn', 'btn-choice');
-        expect(button.classList).toHaveLength(2);
-      });
     });
   });
 
   describe('Seção de Inputs', () => {
-    it('d . Renderiza três 3 inputs dentro do form', () => {
+    it('d . Renderiza seis inputs dentro do form', () => {
       render(<Simulador />)
   
       const inputs = screen.getAllByRole('textbox');
-      expect(inputs.length).toBe(3);
+      expect(inputs.length).toBe(6);
     });
   });
 
+  describe('Botões de Limpar ou Simular para o form', () => {
+    it('e . Renderiza botão de Limpar Campos e outro botão de Simular', () => {
+      render(<Simulador />)
+  
+      const buttonLimpar = screen.getByRole('button', { name: 'Limpar campos' });
+      const buttonSimular = screen.getByRole('button', { name: 'Simular' });
 
-})
+      expect(buttonLimpar).toBeInTheDocument();
+      expect(buttonSimular).toBeInTheDocument();
+    });
+
+    it(' f . O botão Simular deve estar desligado (disabled) ao iniciar', () => {
+      render(<Simulador />)
+
+      const buttonSimular = screen.getByRole('button', { name: 'Simular' });
+
+      expect(buttonSimular).toBeDisabled();
+    });
+  });
