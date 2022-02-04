@@ -1,36 +1,20 @@
 import React from 'react';
-import styles from '../../styles/Simulador/InputsContainer.module.scss';
+import Input from '../Input';
+import styles from '../../styles/Simulador/FormInputs.module.scss';
 
 const FormInputs = ({ data }) => {
   return (
     <div className={styles.container}>
-      { data.map(({ id, codigo, titulo }) => (
-        <>
-          <label htmlFor={ codigo }>
-            <h4>{ titulo }</h4>
+      {data.map(({ id, codigo, titulo }) => (
+        <div key={ id }>
+          <label htmlFor={codigo}>
+            <h4>{titulo}</h4>
           </label>
-          <input type='text' id={ codigo } />
-        </>
+          <Input codigo={codigo} />
+        </div>
       ))}
     </div>
   );
 };
 
 export default FormInputs;
-
-  {/* <div className={styles.inputsContainer}>
-    <label htmlFor='aporte-inicial'>
-      <h4>Aporte Inicial</h4>
-    </label>
-    <input type='text' id='aporte-inicial' />
-
-    <label htmlFor='prazo'>
-      <h4>Prazo (em meses)</h4>
-    </label>
-    <input type='text' id='prazo' />
-
-    <label htmlFor='ipca'>
-      <h4>IPCA (ao ano)</h4>
-    </label>
-    <input type='text' id='ipca' value={`${indicador.ipca}%`} />
-  </div> */}

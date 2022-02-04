@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/Simulador/ButtonsContainer.module.scss';
+import styles from '../../styles/Simulador/FormButtons.module.scss';
 
 const FormButtons = () => {
   return (
