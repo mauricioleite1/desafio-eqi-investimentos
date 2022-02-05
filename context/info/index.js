@@ -16,7 +16,7 @@ export const InfoStorage = ({ children }) => {
   const [info, setInfo] = useState(initialState);
 
   return (
-    <Info.Provider value={info}>
+    <Info.Provider value={{info, setInfo}}>
       {children}
     </Info.Provider>
   );

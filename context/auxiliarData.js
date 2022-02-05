@@ -3,11 +3,13 @@ export const opcoesRendimento = [
     id: 1,
     codigo: 'bruto',
     titulo: 'Bruto',
+    type: 'rendimento',
   },
   {
     id: 2,
     codigo: 'liquido',
     titulo: 'Líquido',
+    type: 'rendimento',
   }
 ];
 
@@ -16,16 +18,19 @@ export const opcoesIndexacao = [
     id: 1,
     codigo: 'pre',
     titulo: 'PRÉ',
+    type: 'indexacao',
   },
   {
     id: 2,
     codigo: 'pos',
     titulo: 'PÓS',
+    type: 'indexacao',
   },
   {
     id: 3,
     codigo: 'fixado',
     titulo: 'FIXADO',
+    type: 'indexacao',
   },
 ]
 

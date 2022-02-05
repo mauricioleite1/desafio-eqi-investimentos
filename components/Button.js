@@ -1,19 +1,24 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Info } from '../context/info';
 
-const Button = ({ codigo, titulo }) => {
+const Button = ({ codigo, titulo, type }) => {
   const [selected, setSelected] = useState(false);
-  const { rendimento, indexacao, setInfo } = useContext(Info);
+  const { info, setInfo } = useContext(Info);
 
   useEffect(() => {
-    console.log('renderizei');
-    if (codigo === rendimento || codigo === indexacao) {
-      setSelected(!selected);
-    }
-  }, []);
+    const values = Object.values(info);
 
-  const handleClick = () => {
-    console.log(codigo);
+    if (values.includes(codigo)) {
+      setSelected(true);  
+      console.log(codigo);
+    } else {
+      setSelected(false);
+    }
+  }, [info, codigo]);
+  
+  const handleClick = (event) => {
+    event.preventDefault();
+    setInfo({ ...info, [type]: codigo });
   };
 
   return (
@@ -21,7 +26,7 @@ const Button = ({ codigo, titulo }) => {
       className={`btn btn-choice ${selected && 'selected'}`}
       onClick={handleClick}
     >
-     <span><h5>{ selected && '✔' }</h5>{titulo}</span>
+     <span><h4>{ selected && '✓' }</h4>{titulo}</span>
     </button>
   );
 };
