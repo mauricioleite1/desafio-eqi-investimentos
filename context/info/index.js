@@ -5,6 +5,7 @@ const initialState = {
   aporteinicial: '',
   aportemensal: '',
   cdi: '',
+  indexacao: 'pos',
   ipca: '',
   prazo: '',
   rendimento: 'bruto',
