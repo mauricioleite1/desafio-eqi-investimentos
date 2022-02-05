@@ -48,5 +48,7 @@ button {
 }
 
 .selected {
+  @include size(100%, 10rem);
   background: #ed8e53;
+  color: white;
 }

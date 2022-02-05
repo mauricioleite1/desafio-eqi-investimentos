@@ -9,7 +9,7 @@ const Form = ({ titulo, inputs, opcoes }) => {
       <div className={styles.choice}>
         <div>
           <h4>{titulo}</h4>
-          <span>
+          <span id={styles.info}>
             <h4>i</h4>
           </span>
         </div>

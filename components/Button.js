@@ -21,7 +21,7 @@ const Button = ({ codigo, titulo }) => {
       className={`btn btn-choice ${selected && 'selected'}`}
       onClick={handleClick}
     >
-      {titulo}
+     <span><h5>{ selected && '✔' }</h5>{titulo}</span>
     </button>
   );
 };
