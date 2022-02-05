@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { Info } from '../context/info';
 import { getData } from '../context/helpers';
 
 const Input = ({ type = 'text', id, codigo }) => {
+  const { info, setInfo } = useContext(Info);
   const [content, setContent] = useState('');
   const [indicador, setIndicador] = useState('');
   
@@ -14,6 +16,8 @@ const Input = ({ type = 'text', id, codigo }) => {
   const handleChange = ({ target: { value } }) => {
     if (indicador) setIndicador(value)
     setContent(value);
+
+    setInfo({ ...info, [codigo]: value })
   };
 
   return (

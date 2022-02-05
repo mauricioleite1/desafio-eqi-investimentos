@@ -1,11 +1,11 @@
 button {
   &:disabled {
-    background: #969696;
-    border: 1px solid #969696;
+    background: c$gray;
+    border: 1px solid $gray;
     color: black;
 
     &:hover {
-      background: #969696;
+      background: #9696965d;
     }
   }
 }
@@ -48,6 +48,6 @@ button {
 }
 
 .selected {
-  background: #ed8e53;
+  background: $accent-color;
   color: white;
 }

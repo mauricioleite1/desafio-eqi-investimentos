@@ -2,18 +2,14 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Info } from '../context/info';
 
 const Button = ({ codigo, titulo, type }) => {
-  const [selected, setSelected] = useState(false);
   const { info, setInfo } = useContext(Info);
+  const [selected, setSelected] = useState(false);
 
   useEffect(() => {
     const values = Object.values(info);
 
-    if (values.includes(codigo)) {
-      setSelected(true);  
-      console.log(codigo);
-    } else {
-      setSelected(false);
-    }
+    if (values.includes(codigo)) return setSelected(true);
+    return setSelected(false);
   }, [info, codigo]);
   
   const handleClick = (event) => {
