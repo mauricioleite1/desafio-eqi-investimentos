@@ -10,33 +10,49 @@
 .wrapper {
   @include flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.2rem;
 }
 
 .graphComAporte {
   @include flex(flex-end);
   gap: 10px;
+  position: relative;
 
   div {
-    @include size(_, 1.6rem);
+    @include size(_, 1.8rem);
+    @include transition(0.1s);
     background: c.$accent-color;
     overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
 .graphSemAporte {
-  @include flex;
+  @include flex(flex-end);
   gap: 10px;
+  position: relative;
+
 }
 
 .bar {
   @include flex;
   flex-direction: column;
   gap: 0.1rem;
+
   
   div {
-    @include size(30px, 1.6rem);
+    @include size(30px, 1.8rem);
+    @include transition(0.1s);
     background: rgb(0, 0, 0);
+    cursor: pointer;
     overflow: hidden;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

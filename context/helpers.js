@@ -12,3 +12,8 @@ export const getSimulacao = async (tipoRendimento, tipoIndexacao) => {
 
   return data;
 };
+
+export const formatCurrency = Intl.NumberFormat('pt-BR', {
+  style: 'currency',
+  currency: 'BRL',
+});

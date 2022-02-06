@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import Card from './Card';
 import Graph from './Graph';
-import { Info } from '../../context/info';
 import { Simulacao } from '../../context/simulacao';
+import { formatCurrency } from '../../context/helpers';
 import styles from '../../styles/ResultadoDaSimulacao/ResultadoDaSimulacao.module.scss';
 
 const ResultadoDaSimulacao = () => {
-  const { info } = useContext(Info);
   const { simulacaoData } = useContext(Simulacao);
 
   return (
@@ -18,7 +17,7 @@ const ResultadoDaSimulacao = () => {
           <section className={styles.cardsContainer}>
             <Card
               titulo='Valor Final Bruto'
-              valor={`R$ ${simulacaoData.valorFinalBruto}`}
+              valor={formatCurrency.format(simulacaoData.valorFinalBruto)}
             />
             <Card
               titulo='Alíquota do IR'
@@ -26,19 +25,19 @@ const ResultadoDaSimulacao = () => {
             />
             <Card
               titulo='Valor Pago em IR'
-              valor={`R$ ${simulacaoData.valorPagoIR}`}
+              valor={formatCurrency.format(simulacaoData.valorPagoIR)}
             />
             <Card
               titulo='Valor Final Líquido'
-              valor={`R$ ${simulacaoData.valorFinalLiquido}`}
+              valor={formatCurrency.format(simulacaoData.valorFinalLiquido)}
             />
             <Card
               titulo='Valor Total Investido'
-              valor={`R$ ${simulacaoData.valorTotalInvestido}`}
+              valor={formatCurrency.format(simulacaoData.valorTotalInvestido)}
             />
             <Card
               titulo='Ganho Líquido'
-              valor={`R$ ${simulacaoData.ganhoLiquido}`}
+              valor={formatCurrency.format(simulacaoData.ganhoLiquido)}
             />
           </section>
         </>

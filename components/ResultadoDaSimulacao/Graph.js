@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Simulacao } from '../../context/simulacao';
 import styles from '../../styles/ResultadoDaSimulacao/Graph.module.scss';
+import GraphBar from './GraphBar';
 
 const Graph = () => {
   const {
@@ -16,20 +17,28 @@ const Graph = () => {
     <section className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.graphComAporte}>
-          {Object.values(comAporte).map((valor, key) => (
-            <div
-              key={key}
-              style={{ height: (valor / maiorValorComAporte) * 100 * 1.5 }}
-            />
+          {Object.values(comAporte).map((valor, index) => (
+            <div className={styles.bar} key={index}>
+              <GraphBar
+                key={index}
+                tipo='com aporte'
+                index={index}
+                maiorValor={maiorValorComAporte}
+                valor={valor}
+              />
+            </div>
           ))}
         </div>
 
         <div className={styles.graphSemAporte}>
           {Object.values(semAporte).map((valor, index) => (
             <div className={styles.bar} key={index}>
-              <div
+              <GraphBar
                 key={index}
-                style={{ height: (valor / maiorValorSemAporte) * 30 }}
+                tipo='sem aporte'
+                index={index}
+                maiorValor={maiorValorSemAporte}
+                valor={valor}
               />
               <h4>{index}</h4>
             </div>
