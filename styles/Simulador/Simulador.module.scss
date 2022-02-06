@@ -1,10 +1,10 @@
-@use './mixins'as *;
+@use '../mixins'as *;
 
 .container {
-  @include flex(flex-start);
-  @include size(100%);  
+  @include flex(flex-start, flex-start);
+  @include size(100%); 
   flex: 1;
-  padding: 3rem;
+  padding-inline: 3rem;
   flex-direction: column;
   gap: 3rem;
 }
@@ -18,7 +18,6 @@
   div {
     @include flexspaced;
     @include size(auto, 100%);
-
     }
   }
 

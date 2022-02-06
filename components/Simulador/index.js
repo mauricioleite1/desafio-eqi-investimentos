@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './Form';
 import FormButtons from './FormButtons';
-import styles from '../../styles/Simulador.module.scss';
+import styles from '../../styles/Simulador/Simulador.module.scss';
 import * as auxiliarData from '../../context/auxiliarData';
 
 const Simulador = () => {

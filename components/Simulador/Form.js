@@ -1,7 +1,7 @@
 import React from 'react';
 import FormInputs from './FormInputs';
 import FormOptions from './FormOptions';
-import styles from '../../styles/Simulador.module.scss';
+import styles from '../../styles/Simulador/Simulador.module.scss';
 
 const Form = ({ titulo, inputs, opcoes }) => {
   return (

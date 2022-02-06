@@ -1,0 +1,31 @@
+@use '../mixins'as *;
+
+.container {
+  @include flex;
+  @include size(100%);
+  flex: 1.5;
+  flex-direction: column;
+
+  h2 {
+    @include size;
+  }
+}
+
+.cardsContainer {
+  @include flex;
+  flex: 1;
+  gap: 3rem;
+  flex-flow: row wrap;
+}
+
+.graphContainer {
+  @include flex;
+  @include size;
+  background: rgb(255, 98, 98);
+  flex-direction: column;
+  flex: 2;
+
+  h3 {
+    @include size;
+  }
+}
