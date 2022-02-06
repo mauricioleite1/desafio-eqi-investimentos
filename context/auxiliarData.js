@@ -28,7 +28,7 @@ export const opcoesIndexacao = [
   },
   {
     id: 3,
-    codigo: 'fixado',
+    codigo: 'ipca',
     titulo: 'FIXADO',
     type: 'indexacao',
   },
