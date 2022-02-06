@@ -47,7 +47,7 @@ const ResultadoDaSimulacao = () => {
       <section className={styles.graphContainer}>
         <h3>Projeção de Valores</h3>
 
-        <Graph />
+        { simulacaoData && <Graph /> }
       </section>
     </div>
   );

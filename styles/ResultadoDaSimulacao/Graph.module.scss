@@ -1,0 +1,42 @@
+@use '../mixins' as *;
+@use '../colors' as c;
+
+.container {
+  @include flex;
+  @include size;
+  flex-direction: column;
+}
+
+.wrapper {
+  @include flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.graphComAporte {
+  @include flex(flex-end);
+  gap: 10px;
+
+  div {
+    @include size(_, 1.6rem);
+    background: c.$accent-color;
+    overflow: hidden;
+  }
+}
+
+.graphSemAporte {
+  @include flex;
+  gap: 10px;
+}
+
+.bar {
+  @include flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  
+  div {
+    @include size(30px, 1.6rem);
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+}
