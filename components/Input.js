@@ -4,30 +4,31 @@ import { getData } from '../context/helpers';
 
 const Input = ({ type = 'text', id, codigo }) => {
   const { info, setInfo } = useContext(Info);
-  const [content, setContent] = useState('');
+
+  const [inputValue, setInputValue] = useState(null);
   const [indicador, setIndicador] = useState('');
   
   useEffect(() => {
     if (codigo === 'cdi' || codigo === 'ipca') {
-      getData(setIndicador, codigo);
+      getData(info, setInfo);
     }
-  }, [codigo]);
+  }, [setInfo, codigo]);
 
-  const handleChange = ({ target: { value } }) => {
+  const handleChange = ({ target: { defaultValue, value } }) => {
     if (indicador) setIndicador(value)
-    setContent(value);
-
     setInfo({ ...info, [codigo]: value })
   };
 
   return (
-    <input
-      type={type}
-      id={codigo}
-      name={codigo}
-      onChange={handleChange}
-      value={indicador ? indicador : content}
-    />
+    <>
+      <input
+        type={type}
+        id={codigo}
+        name={codigo}
+        onChange={handleChange}
+        value={ info[codigo] !== 0 ? info[codigo] : '' }
+      />
+    </>
   );
 };
 

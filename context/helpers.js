@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-export const getData = async (setIndicador, codigo) => {
+export const getData = async (info, setInfo) => {
   const { data } = await axios.get('http://localhost:3000/indicadores');
-  const { valor } = data.find((indicador) => indicador.nome === codigo);
-
-  setIndicador(`${valor}%`);
+  setInfo({ ...info, cdi: data[0].valor, ipca: data[1].valor });
 };

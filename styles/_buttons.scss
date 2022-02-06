@@ -1,11 +1,11 @@
 button {
   &:disabled {
-    background: c$gray;
+    background: $gray;
     border: 1px solid $gray;
     color: black;
 
     &:hover {
-      background: #9696965d;
+      opacity: 1;
     }
   }
 }
@@ -19,7 +19,7 @@ button {
   cursor: pointer;
 
   &:hover {
-    background: #cbcbcb4a;
+    opacity: 0.6;
   }
 }
 
@@ -45,6 +45,10 @@ button {
   flex: 1;
   flex-direction: column;
   gap: 4rem;
+}
+
+.btn-simular {
+  background: $accent-color;
 }
 
 .selected {
