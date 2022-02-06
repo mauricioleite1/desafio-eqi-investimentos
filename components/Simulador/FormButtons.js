@@ -11,7 +11,7 @@ const FormButtons = () => {
 
   const handleClick = async () => {
     const data = await getSimulacao(info.rendimento, info.indexacao)
-    console.log(data[0]);
+    setSimulacaoData(data[0]);
   }
 
   return (
