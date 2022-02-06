@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Card from './Card';
+import Graph from './Graph';
 import { Info } from '../../context/info';
 import { Simulacao } from '../../context/simulacao';
 import styles from '../../styles/ResultadoDaSimulacao/ResultadoDaSimulacao.module.scss';
@@ -10,11 +11,11 @@ const ResultadoDaSimulacao = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Resultado da Simulação</h2>
+      {simulacaoData && (
+        <>
+          <h2>Resultado da Simulação</h2>
 
-      <section className={styles.cardsContainer}>
-        {simulacaoData && (
-          <>
+          <section className={styles.cardsContainer}>
             <Card
               titulo='Valor Final Bruto'
               valor={`R$ ${simulacaoData.valorFinalBruto}`}
@@ -39,12 +40,14 @@ const ResultadoDaSimulacao = () => {
               titulo='Ganho Líquido'
               valor={`R$ ${simulacaoData.ganhoLiquido}`}
             />
-          </>
-        )}
-      </section>
+          </section>
+        </>
+      )}
 
       <section className={styles.graphContainer}>
         <h3>Projeção de Valores</h3>
+
+        <Graph />
       </section>
     </div>
   );

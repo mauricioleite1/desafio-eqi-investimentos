@@ -4,7 +4,6 @@
   @include flex(flex-start, flex-start);
   @include size(100%); 
   flex: 1;
-  padding-inline: 3rem;
   flex-direction: column;
   gap: 3rem;
 }

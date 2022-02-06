@@ -3,7 +3,7 @@
 .container {
   @include flex(flex-start);
   @include size;
-  padding: 2rem 2rem;
+  padding: 2rem;
   overflow-x: hidden;
 }
 
@@ -12,6 +12,7 @@
   @include size(50rem);
   background: #efefef;
   flex-flow: row wrap;
+  padding: 2rem;
   padding-bottom: 20px;
 
   header {
@@ -22,5 +23,6 @@
   section {
     @include flex;
     @include size(90%);
+    gap: 4rem;
   }
 }
