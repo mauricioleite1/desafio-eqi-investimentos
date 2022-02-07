@@ -16,7 +16,7 @@ const GraphBar = ({ index, maiorValor, valor, tipo }) => {
         onMouseOver={() => setTooltip(!tooltip)}
         onMouseOut={() => setTooltip(!tooltip)}
         style={{
-          height: (valor / maiorValor) * 40 * multiplier(),
+          height: (valor / maiorValor) * 30 * multiplier(),
           backgroundColor: tipo === 'com aporte' && '#ed8e53',
         }}
       />

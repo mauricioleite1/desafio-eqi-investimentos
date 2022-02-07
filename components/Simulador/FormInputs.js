@@ -6,7 +6,7 @@ const FormInputs = ({ data }) => {
   return (
     <div className={styles.container}>
       {data.map(({ id, codigo, titulo }) => (
-        <div key={ id }>
+        <div key={id}>
           <label htmlFor={codigo}>
             <h4>{titulo}</h4>
           </label>

@@ -10,14 +10,10 @@ const initialState = {
   prazo: 0,
   rendimento: 'bruto',
   rentabilidade: 0,
-}
+};
 
 export const InfoStorage = ({ children }) => {
   const [info, setInfo] = useState(initialState);
 
-  return (
-    <Info.Provider value={{info, setInfo}}>
-      {children}
-    </Info.Provider>
-  );
+  return <Info.Provider value={{ info, setInfo }}>{children}</Info.Provider>;
 };

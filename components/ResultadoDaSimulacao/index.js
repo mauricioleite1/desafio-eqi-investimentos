@@ -12,9 +12,9 @@ const ResultadoDaSimulacao = () => {
     <div className={styles.container}>
       {simulacaoData && (
         <>
-          <h2>Resultado da Simulação</h2>
 
-          <section className={styles.cardsContainer}>
+          <div className={styles.cardsContainer}>
+          <h2>Resultado da Simulação</h2>
             <Card
               titulo='Valor Final Bruto'
               valor={formatCurrency.format(simulacaoData.valorFinalBruto)}
@@ -39,15 +39,15 @@ const ResultadoDaSimulacao = () => {
               titulo='Ganho Líquido'
               valor={formatCurrency.format(simulacaoData.ganhoLiquido)}
             />
-          </section>
+          </div>
         </>
       )}
 
-      <section className={styles.graphContainer}>
+      <div className={styles.graphContainer}>
         <h3>Projeção de Valores</h3>
 
         { simulacaoData && <Graph /> }
-      </section>
+      </div>
     </div>
   );
 };

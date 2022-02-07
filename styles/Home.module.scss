@@ -9,20 +9,20 @@
 
 .content {
   @include flex;
-  @include size(50rem);
+  @include size(50rem, 1400px);
   background: #efefef;
   flex-flow: row wrap;
-  padding: 2rem;
+  padding-inline: 2rem;
   padding-bottom: 20px;
-
+  
   header {
     @include flex;
-    @include size(10%);
+    @include size(15%);
   }
-
+  
   section {
-    @include flex;
-    @include size(90%);
+    @include flex(flex-start);
+    @include size(85%);
     gap: 4rem;
   }
 }

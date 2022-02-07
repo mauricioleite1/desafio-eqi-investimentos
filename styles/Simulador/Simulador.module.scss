@@ -1,11 +1,10 @@
 @use '../mixins'as *;
 
 .container {
-  @include flex(flex-start, flex-start);
-  @include size(100%); 
+  @include flex(flex-start, space-between);
+  @include size(90%); 
   flex: 1;
   flex-direction: column;
-  gap: 3rem;
 }
 
 .choice {
@@ -35,14 +34,12 @@
 
 
 .wrapper {
-  @include flex;
+  @include flexspaced;
   @include size;
-  gap: 7rem;
 
   form {
     @include flex;
-    @include size(100%, _);
-    flex: 1;
+    @include size(100%, 42%);
     flex-direction: column;
     gap: 4rem;
   }

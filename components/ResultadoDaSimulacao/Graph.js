@@ -10,9 +10,6 @@ const Graph = () => {
     },
   } = useContext(Simulacao);
 
-  const maiorValorComAporte = comAporte[10];
-  const maiorValorSemAporte = semAporte[10];
-
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
@@ -23,7 +20,7 @@ const Graph = () => {
                 key={index}
                 tipo='com aporte'
                 index={index}
-                maiorValor={maiorValorComAporte}
+                maiorValor={comAporte[10]}
                 valor={valor}
               />
             </div>
@@ -37,12 +34,32 @@ const Graph = () => {
                 key={index}
                 tipo='sem aporte'
                 index={index}
-                maiorValor={maiorValorSemAporte}
+                maiorValor={semAporte[10]}
                 valor={valor}
               />
               <h4>{index}</h4>
             </div>
           ))}
+          <div className={styles.legendaValor}>
+            <h6>Valor (R$)</h6>
+          </div>
+          <div className={styles.legendaMeses}>
+            <h6>Tempo (meses)</h6>
+
+            <div className={styles.legendaWrapper}>
+
+              <div className={styles.legenda}>
+                <div className={`${styles.legendaBola} ${styles.accentColor}`} />
+                <h6>Com aporte</h6>
+              </div>
+              
+              <div className={styles.legenda}>
+                <div className={styles.legendaBola} />
+                <h6>Sem aporte</h6>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
