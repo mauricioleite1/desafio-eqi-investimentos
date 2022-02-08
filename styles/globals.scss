@@ -41,3 +41,8 @@ a {
     font-size: 0.6em;
   }
 }
+
+.error-message {
+  @include size(10px);
+  color: red;
+}

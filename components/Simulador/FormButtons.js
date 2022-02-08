@@ -25,6 +25,7 @@ const FormButtons = () => {
     };
 
     setInfo(initialState);
+    setSimulacaoData(null)
   }
 
   return (

@@ -1,10 +1,13 @@
 import { InfoStorage } from './info';
 import { SimulacaoStorage } from './simulacao';
+import { ErrorStorage } from './error';
 
 const GlobalContext = ({ children }) => {
   return (
     <SimulacaoStorage>
-      <InfoStorage>{children}</InfoStorage>
+      <ErrorStorage>
+        <InfoStorage>{children}</InfoStorage>
+      </ErrorStorage>
     </SimulacaoStorage>
   );
 };
