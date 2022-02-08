@@ -69,3 +69,10 @@ export const inputsIndexacao = [
     titulo: 'CDI (ao ano)',
   },
 ]
+
+export const infoRendimentos = `Bruto: não possui descontos, taxas e/ou impostos.
+Líquido: possui descontos, taxas e/ou impostos.`
+
+export const infoIndexacao = `A política econômica de alterar o preço dos produtos e serviços com base em índices.
+Determinados itens sofrerão o reajuste de acordo com a alíquota
+ou taxa do indexador econômico escolhido.`

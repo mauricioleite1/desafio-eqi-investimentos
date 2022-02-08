@@ -1,4 +1,5 @@
 @use '../mixins' as *;
+@use '../colors' as c;
 
 .container {
   @include flex(flex-start, space-between);
@@ -16,19 +17,6 @@
   div {
     @include flexspaced;
     @include size;
-  }
-}
-
-#info {
-  @include flex;
-  @include size(1rem, 1rem);
-  border: 1px solid #000;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 0.8em;
-
-  &:hover {
-    opacity: 0.6;
   }
 }
 

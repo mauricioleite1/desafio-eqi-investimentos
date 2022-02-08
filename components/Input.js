@@ -1,10 +1,12 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Info } from '../context/info';
 import { getData } from '../context/helpers';
+import { Simulacao } from '../context/simulacao';
 import { Error } from '../context/error';
 
 const Input = ({ type = 'text', titulo, id, codigo }) => {
   const { info, setInfo } = useContext(Info);
+  const { setSimulacaoData } = useContext(Simulacao);
   const { error, setError } = useContext(Error);
 
   const [inputValue, setInputValue] = useState('');
@@ -17,6 +19,7 @@ const Input = ({ type = 'text', titulo, id, codigo }) => {
   }, [setInfo, codigo]);
 
   const handleChange = ({ target: { value } }) => {
+    setSimulacaoData(null);
     if (!Number.isNaN(+value)) {
       setError({ codigos: error.codigos.filter((cod) => cod !== codigo) });
       return setInfo({ ...info, [codigo]: +value });

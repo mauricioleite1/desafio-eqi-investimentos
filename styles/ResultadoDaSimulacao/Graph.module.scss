@@ -20,7 +20,7 @@
   div {
     @include size(_, 1.8rem);
     @include transition(0.1s);
-    animation: fadeIn 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    animation: fadeIn 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     background: c.$accent-color;
     overflow: hidden;
     cursor: pointer;
