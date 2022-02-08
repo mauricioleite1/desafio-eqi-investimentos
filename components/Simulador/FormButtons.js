@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { getSimulacao } from '../../context/helpers';
 import { Info } from '../../context/info';
+import { Error } from '../../context/error';
 import { Simulacao } from '../../context/simulacao';
 
 import styles from '../../styles/Simulador/FormButtons.module.scss';
 
 const FormButtons = () => {
+  const { error } = useContext(Error);
   const { info, setInfo } = useContext(Info);
   const { simulacaoData, setSimulacaoData } = useContext(Simulacao);
 
@@ -36,7 +38,7 @@ const FormButtons = () => {
         className='btn btn-form btn-simular'
         onClick={() => handleClick()}
         disabled={Object.values(info).some(
-          (info) => info == 0 || !info || info === ''
+          (info) => info == 0 || !info || info === '' || error.codigos.length > 0
         )}
       >
         Simular
