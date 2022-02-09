@@ -12,9 +12,9 @@ const FormButtons = () => {
   const { simulacaoData, setSimulacaoData } = useContext(Simulacao);
 
   const handleClick = async () => {
-    const data = await getSimulacao(info.rendimento, info.indexacao)
+    const data = await getSimulacao(info.rendimento, info.indexacao);
     setSimulacaoData(data[0]);
-  }
+  };
 
   const clearInputs = () => {
     const initialState = {
@@ -27,18 +27,26 @@ const FormButtons = () => {
     };
 
     setInfo(initialState);
-    setSimulacaoData(null)
-  }
+    setSimulacaoData(null);
+  };
 
   return (
     <div className={styles.container}>
-      <button className='btn btn-form' onClick={clearInputs}>Limpar campos</button>
+      <button
+        className='btn btn-form'
+        data-cy='simular-btn'
+        onClick={clearInputs}
+      >
+        Limpar campos
+      </button>
 
       <button
         className='btn btn-form btn-simular'
+        data-cy='simular-btn'
         onClick={() => handleClick()}
         disabled={Object.values(info).some(
-          (info) => info == 0 || !info || info === '' || error.codigos.length > 0
+          (info) =>
+            info == 0 || !info || info === '' || error.codigos.length > 0
         )}
       >
         Simular

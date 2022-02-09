@@ -46,3 +46,9 @@ a {
   @include size(10px);
   color: red;
 }
+
+.input-box {
+  @include flex;
+  border-bottom: 1px solid black;
+  position: relative;
+}

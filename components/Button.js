@@ -17,10 +17,13 @@ const Button = ({ codigo, titulo, type }) => {
     setInfo({ ...info, [type]: codigo });
   };
 
+  console.log(type);
+
   return (
     <button
       className={`btn btn-choice ${selected && 'selected'}`}
       onClick={handleClick}
+      data-cy={ type === 'rendimento' ? "options-btn-rendimento" : "options-btn-indexacao" }
     >
      <span><h4>{ selected && '✓' }</h4>{titulo}</span>
     </button>

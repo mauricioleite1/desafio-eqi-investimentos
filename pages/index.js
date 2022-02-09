@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.scss';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <main className={styles.content}>
+      <main className={styles.content} data-cy="content">
         <header>
           <h1>Simulador de Investimentos</h1>
         </header>

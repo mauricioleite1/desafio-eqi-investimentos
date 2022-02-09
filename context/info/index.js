@@ -2,14 +2,14 @@ import React, { useState, createContext } from 'react';
 
 export const Info = createContext();
 const initialState = {
-  aporteinicial: 0,
-  aportemensal: 0,
-  cdi: 0,
+  aporteinicial: null,
+  aportemensal: null,
+  cdi: null,
   indexacao: 'pos',
-  ipca: 0,
-  prazo: 0,
+  ipca: null,
+  prazo: null,
   rendimento: 'bruto',
-  rentabilidade: 0,
+  rentabilidade: null,
 };
 
 export const InfoStorage = ({ children }) => {
