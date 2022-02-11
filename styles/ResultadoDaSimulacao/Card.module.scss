@@ -1,0 +1,23 @@
+@use '../mixins'as *;
+
+
+.container {
+  @include flex;
+  @include size(5.4rem, 29%);
+  @include transition;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 8px;
+  cursor: pointer;
+  flex-flow: row wrap;
+  flex-grow: 1;
+
+  h3, h4 {
+    @include size;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

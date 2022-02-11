@@ -1,0 +1,22 @@
+@use '../mixins' as *;
+@use '../colors' as c;
+
+.container {
+  @include flex;
+  @include size;
+  flex-direction: column;
+  gap: 3rem;
+
+  div, label, input {
+    @include size;
+  }
+
+  input {
+    @include transition;
+    background: transparent;
+    border: none;
+    height: 2.4rem;
+    outline: none;
+    padding-left: 5px;
+  }
+}

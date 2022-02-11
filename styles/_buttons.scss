@@ -1,0 +1,58 @@
+button {
+  &:disabled {
+    background: $gray;
+    border: 1px solid $gray;
+    color: black;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.btn {
+  @include flex;
+  @include size(auto, _);
+  @include transition(0.1s);
+  background: none;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.btn-choice {
+  flex: 1;
+  padding-block: 0.9rem;
+
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+.btn-form {
+  @include flex;
+  @include size(100%, 10rem);
+  border-radius: 8px;
+  flex: 1;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.btn-simular {
+  background: $accent-color;
+  border: 1px solid $accent-color;
+}
+
+.selected {
+  background: $accent-color;
+  color: white;
+}

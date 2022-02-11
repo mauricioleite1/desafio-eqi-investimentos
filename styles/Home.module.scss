@@ -1,0 +1,28 @@
+@use './mixins' as *;
+
+.container {
+  @include flex(flex-start);
+  @include size;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.content {
+  @include flex;
+  @include size(50rem, 1400px);
+  background: #efefef;
+  flex-flow: row wrap;
+  padding-inline: 3rem;
+  padding-bottom: 20px;
+  
+  header {
+    @include flex;
+    @include size(15%);
+  }
+  
+  section {
+    @include flex(flex-start);
+    @include size(85%);
+    gap: 4rem;
+  }
+}

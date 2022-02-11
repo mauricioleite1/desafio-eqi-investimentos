@@ -1,0 +1,33 @@
+@use '../mixins' as *;
+@use '../colors' as c;
+
+.container {
+  @include flex(flex-start, space-between);
+  @include size(90%);
+  flex: 1;
+  flex-direction: column;
+}
+
+.choice {
+  @include flex;
+  @include size;
+  flex-direction: column;
+  gap: 1rem;
+
+  div {
+    @include flexspaced;
+    @include size;
+  }
+}
+
+.wrapper {
+  @include flexspaced;
+  @include size;
+
+  form {
+    @include flex;
+    @include size(100%, 42%);
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
