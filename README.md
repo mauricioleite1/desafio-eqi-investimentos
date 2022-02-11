@@ -1,6 +1,5 @@
-#Desafio EQI Investimentos - Frontend Jr
+# Desafio EQI Investimentos - Frontend Jr
 
-## Por quê?
 👨🏻‍💻 Este respositório contém o projeto para o desafio EQI Investimentos feito em Fevereiro/2022, consiste em uma Calculadora de Investimentos.
 Onde em apenas uma página, é possível fazer algumas simulações de investimentos, baseadas em uma API Fake fornecida pela EQI Investimentos.
 
