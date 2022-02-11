@@ -1,4 +1,5 @@
 @use '../mixins' as *;
+@use '../media' as m;
 
 .container {
   @include flex;
@@ -11,4 +12,17 @@
       weight: bold;
     }
   }
+}
+
+@media screen and (max-width: m.$small) {
+  .container {
+    @include size(10rem);
+    flex-direction: column;
+    gap: 2rem;
+
+    button {
+      @include flex;
+      @include size(7rem);
+    }
+  } 
 }
