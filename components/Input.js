@@ -9,28 +9,11 @@ const Input = ({ type = 'text', titulo, id, codigo }) => {
   const { setSimulacaoData } = useContext(Simulacao);
   const { error, setError } = useContext(Error);
 
-  const [inputValue, setInputValue] = useState('');
-  const [indicador, setIndicador] = useState('');
-
   useEffect(() => {
     if (codigo === 'cdi' || codigo === 'ipca') {
       getData(info, setInfo);
     }
   }, [setInfo, codigo]);
-
-  const mask = (value) => {
-  //   let value = e.target.value;
-    // value = value.replace(/\D/g, '');
-    // value = value.replace(/(\d.*)$/, '$1%');
-    // value = value.replace(/(?=(\d{3})+(\D))\B/g, '.');
-    
-    // const re = /(\d)$/g
-    // value = value.replace(re, ' %');
-
-    // regex that adds to end of line %
-  //   e.target.value = value;
-    return value;
-  };
 
   const handleChange = ({ target: { value } }) => {
 
@@ -68,7 +51,7 @@ const Input = ({ type = 'text', titulo, id, codigo }) => {
             <span>
               <h4>R$</h4>
             </span>
-          ) : (
+          ) : codigo !== 'prazo' && (
             <span style={{ position: 'absolute', right: 0 }}>
               <h4>%</h4>
             </span>

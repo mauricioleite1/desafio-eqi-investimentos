@@ -11,7 +11,7 @@ const Graph = () => {
   } = useContext(Simulacao);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-cy="graph">
       <div className={styles.wrapper}>
         <div className={styles.graphComAporte}>
           {Object.values(comAporte).map((valor, index) => (

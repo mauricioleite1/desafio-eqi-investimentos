@@ -18,12 +18,12 @@ const FormButtons = () => {
 
   const clearInputs = () => {
     const initialState = {
-      aporteinicial: 0,
-      aportemensal: 0,
+      aporteinicial: '',
+      aportemensal: '',
       indexacao: 'pos',
-      prazo: 0,
+      prazo: '',
       rendimento: 'bruto',
-      rentabilidade: 0,
+      rentabilidade: '',
     };
 
     setInfo(initialState);
@@ -34,7 +34,7 @@ const FormButtons = () => {
     <div className={styles.container}>
       <button
         className='btn btn-form'
-        data-cy='simular-btn'
+        data-cy='clear-btn'
         onClick={clearInputs}
       >
         Limpar campos

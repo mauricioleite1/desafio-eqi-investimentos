@@ -12,7 +12,7 @@ const ResultadoDaSimulacao = () => {
     <div className={styles.container}>
       {simulacaoData && (
         <>
-          <div className={styles.cardsContainer}>
+          <div className={styles.cardsContainer} data-cy="resultado-simulacao">
             <h2>Resultado da Simulação</h2>
             <Card
               titulo='Valor Final Bruto'
