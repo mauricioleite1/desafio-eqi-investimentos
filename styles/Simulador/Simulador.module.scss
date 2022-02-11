@@ -1,4 +1,5 @@
 @use '../mixins' as *;
+@use '../media' as m;
 @use '../colors' as c;
 
 .container {
@@ -29,5 +30,25 @@
     @include size(100%, 42%);
     flex-direction: column;
     gap: 4rem;
+  }
+}
+
+@media screen and (max-width: m.$small) {
+  .wrapper {
+    flex-direction: column;
+    margin-top: 2rem;
+    
+    form {
+      @include size(auto, 100%);
+      background: rgb(255, 255, 255);
+      border-radius: 40px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+
+      input {
+        @include size(3.5rem, 100%);
+      }
+    }
   }
 }
