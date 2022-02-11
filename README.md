@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#Desafio EQI Investimentos - Frontend Jr
 
-## Getting Started
+## Por quê?
+👨🏻‍💻 Este respositório contém o projeto para o desafio EQI Investimentos feito em Fevereiro/2022, consiste em uma Calculadora de Investimentos.
+Onde em apenas uma página, é possível fazer algumas simulações de investimentos, baseadas em uma API Fake fornecida pela EQI Investimentos.
 
-First, run the development server:
+<br>
+
+## Para quê?
+🚀 Este app serve para avaliar a capacidade de seguir um wireframe e construir uma página Front-end, buscando informações de um Back-end, e fornecer simulações à pessoa usuária. Um desafio proposto pela [EQI Investimentos](https://eqi.com.br), para vaga de __Desenvolvedor Frontend Jr__.
+
+<br>
+
+## Como?
+🖥️ Ferramentas utilizadas para o desenvolvimento deste projeto:
+
+- [Next.js](https://nextjs.org)
+- [React](https://reactjs.org)
+- [Context-API](https://pt-br.reactjs.org/docs/context.html)
+- [SASS](https://sass-lang.com)
+- [Axios](https://axios-http.com/)
+- [Cypress](https://www.cypress.io)
+- [Jest](https://jestjs.io)
+- [RTL - React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [Yarn](https;//yarnpkg.com)
+
+<br>
+
+## Como iniciar o app
+Primeiramente, deve-se iniciar o servidor backend para que seja possível fazer requisições à API. Para isso é necessário
+executar o git clone do [API Fake EQI Investimentos](https://github.com/eqi-investimentos/desafio-fake-api)
+
+Então utilize o comando para iniciar o servidor:
 
 ```bash
-npm run dev
-# or
+npx json-server db.json
+```
+
+Logo após, para iniciar a parte de frontend,
+Deve-se utilizar o comando:
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Com ambos backend e frontend da aplicação iniciados, acesse [http://localhost:5000](http://localhost:5000) em seu browser para visualizar e utilizar a aplicação.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Como utilizar o app
+Ao acessar a aplicação, haverão seis campos de texto disponíveis, cada um com seu respectivos título (label). Para que seja possível executar uma simulação, você deverá preencher as informações necessários para então ser permitido clicar no botão Simular.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Será habilitada então a parte de Resultados da Simulação. Para fazer outra simulação, apenas escreva novas informações, escolha novas opções ou clique em Limpar Campos, para voltar a aplicação ao seu estado inicial.
 
-## Learn More
+## 💫 Agradecimentos finais
+Agradeço à EQI Investimentos, pela oportunidade de participar dessa etapa, pela experiência e pela prática exercida nesse desafio. Foi muito encorajador e me inspira a aprender muito mais.
 
-To learn more about Next.js, take a look at the following resources:
+## 🗨️ Feedback
+Este projeto foi feito como forma de avaliação e estudo com prazo máximo de 15 dias, se você se interessou e deseja contribuir com seu feedback, fique à vontade para entrar em contato.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Todas as formas de feedback são bem-vindas, sejam para
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+💛 Me influenciar e ensinar com novas técnicas e metodologias<br>
+🐛 Informar algum problema que tenha encontrado<br>
+📥 Enviar PRs para ajudar a resolver problemas ou adicionar mais recursos<br>
